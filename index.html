@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DOPET Careers – Job Application Portal</title>
+<style>
+:root{--bg:#f2f5f3;--card:#fff;--text:#1a1f1c;--mut:#5d6b63;--line:#dce3de;--nav:#2b2f2e;--g:#00c240;--gd:#009c33;--gt:#04150a;--bad:#d33;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1211;--card:#1a1f1c;--text:#e8ece9;--mut:#94a39a;--line:#2c3430;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1211;--card:#1a1f1c;--text:#e8ece9;--mut:#94a39a;--line:#2c3430;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{background:var(--nav);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.bar{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:12px 18px;flex-wrap:wrap}
+.logo{color:#fff;font-weight:800;font-size:1.2rem;text-decoration:none;margin-right:auto}.logo b{color:var(--g)}
+.dp{color:#e1141c;font-size:2.6rem;font-weight:900;letter-spacing:.05em;line-height:1;margin-right:10px;-webkit-text-stroke:5px #fff;paint-order:stroke fill;stroke-linejoin:round}
+nav{display:flex;gap:4px;flex-wrap:wrap}nav a{color:#cfd6d2;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:.95rem}
+nav a:hover,nav a.on{background:#3b4140;color:#fff}
+#burger{display:none;background:none;border:1px solid #555;color:#fff;border-radius:8px;padding:6px 11px;font-size:1.2rem;cursor:pointer}
+main{max-width:1100px;margin:auto;padding:24px 18px 60px}
+h1{margin:.2em 0 .3em;font-size:clamp(1.6rem,4vw,2.4rem)}h2{margin:0 0 .6em;font-size:1.25rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.row{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+label{display:block;font-size:.85rem;font-weight:600;margin:12px 0 5px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--text);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--g);border-color:var(--g)}
+.btn{background:var(--g);color:var(--gt);border:0;border-radius:9px;padding:11px 20px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 0 14px rgba(0,194,64,.35)}
+.btn:hover{background:var(--gd);color:#fff}.btn.sm{padding:7px 13px;font-size:.88rem}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}
+.mut{color:var(--mut)}.err{color:var(--bad);font-size:.9rem;min-height:1.2em}.ok{color:var(--gd)}
+.hero{padding:30px 0 10px}.hero p{max-width:560px;color:var(--mut);font-size:1.1rem}
+.tag{display:inline-block;background:rgba(0,194,64,.14);color:var(--gd);border-radius:20px;padding:2px 10px;font-size:.8rem;font-weight:600}
+.form{max-width:640px}
+.steps{display:flex;margin:16px 0 4px;list-style:none;padding:0}
+.steps li{flex:1;text-align:center;font-size:.78rem;color:var(--mut);position:relative}
+.steps li:before{content:"";display:block;width:22px;height:22px;border-radius:50%;background:var(--line);margin:0 auto 6px;position:relative;z-index:1}
+.steps li:after{content:"";position:absolute;top:10px;left:-50%;width:100%;height:3px;background:var(--line)}
+.steps li:first-child:after{display:none}
+.steps li.d{color:var(--text)}.steps li.d:before,.steps li.d:after{background:var(--g)}
+.steps.rej li.d:before,.steps.rej li.d:after{background:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mut);font-size:.8rem}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:50;display:flex;padding:max(12px,env(safe-area-inset-top)) 12px 12px}.modal .box{background:var(--card);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;max-width:900px;width:100%;margin:auto;height:100%}.modal .hd{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--line)}.modal iframe{flex:1;border:0;width:100%;background:#fff}
+button:disabled{opacity:.45;cursor:not-allowed}
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+@media(max-width:760px){.dp{font-size:2rem}#burger{display:block}nav{display:none;width:100%;flex-direction:column}nav.open{display:flex}}
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="#home"><span class="dp">DOPET</span> <b>Careers</b></a><button id="burger" aria-label="Menu">☰</button><nav id="nav"></nav></div></header>
+<main id="app"></main>
+<script>
+/* DOPET Careers front end. All data goes through api.php (MySQL). */
+const STEPS=['Submitted','Under review','Interview','Offer'],ALL=[...STEPS,'Rejected'];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const kb=n=>n>1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB';
+const fdate=s=>s?new Date(String(s).replace(' ','T')).toLocaleDateString():'';
+let S={user:null,profile:{}},JOBS=[],LAST=null,APPLIED=new Set();
+const nk=s=>String(s).trim().toLowerCase().replace(/\s+/g,' ');
+
+async function api(a,data,form){
+  const o={method:data?'POST':'GET',credentials:'same-origin'};
+  if(data){if(form)o.body=data;else{o.headers={'Content-Type':'application/json'};o.body=JSON.stringify(data)}}
+  const r=await fetch('api.php?action='+a,o);let j={};try{j=await r.json()}catch(e){}
+  if(!r.ok)throw new Error(j.error||'Something went wrong. Please try again.');return j}
+async function load(){try{const r=await api('me');S.user=r.user;S.profile=r.profile||{}}catch(e){S.user=null}}
+const adm=()=>S.user&&S.user.role==='admin';
+
+function menu(){
+  const u=S.user,p=(location.hash||'#home').slice(1);
+  const L=!u?[['home','Jobs'],['login','Log in'],['register','Register'],['admin','Staff']]:adm()?[['home','Jobs'],['admin','Admin']]:[['home','Jobs'],['dashboard','Dashboard'],['apply','Apply'],['track','My applications'],['profile','Profile']];
+  $('#nav').innerHTML=L.map(([h,t])=>`<a href="#${h}" class="${p===h?'on':''}">${t}</a>`).join('')+(u?'<a href="#" id="out">Log out</a>':'');
+  const o=$('#out');if(o)o.onclick=async e=>{e.preventDefault();try{await api('logout',{})}catch(x){}S.user=null;location.hash='home';route()};
+}
+function sj(){try{return sessionStorage.getItem('job')||''}catch(e){return ''}}
+
+const V={
+async home(){JOBS=(await api('jobs')).jobs;const u=S.user;APPLIED=new Set();if(u&&!adm()){try{(await api('myApplications')).apps.forEach(a=>APPLIED.add(nk(a.position)))}catch(e){}}
+return `<section class="hero"><span class="tag">We’re hiring</span><h1>Find your next role.<br>Apply in minutes.</h1><p>Create an account, upload your CV and follow every step of your application in one place.</p>${!u?'<a class="btn" href="#register">Create account</a> <a class="btn ghost" href="#login">Log in</a>':adm()?'':'<a class="btn" href="#apply">Apply now</a>'}</section>
+<h2 style="margin-top:28px">Open positions</h2><div class="card"><div class="row"><div><label>Search</label><input id="q" placeholder="Job title, keyword…"></div><div><label>Department</label><select id="fd"></select></div><div><label>Location</label><select id="fl"></select></div><div><label>Type</label><select id="ft"></select></div></div></div><div class="grid" id="jl"></div>`},
+register(){return `<form class="card form" id="f"><h1>Create account</h1><label>Full name</label><input name="name" required autocomplete="name"><label>Email</label><input name="email" type="email" required autocomplete="email"><label>Password (min 6 characters)</label><input name="pw" type="password" minlength="6" required autocomplete="new-password"><label>Confirm password</label><input name="pw2" type="password" required autocomplete="new-password"><p class="err" id="e"></p><button class="btn">Register</button> <span class="mut">Have an account? <a href="#login">Log in</a></span></form>`},
+login(){return `<form class="card form" id="f"><h1>Log in</h1><label>Email</label><input name="email" type="email" required autocomplete="email"><label>Password</label><input name="pw" type="password" required autocomplete="current-password"><p class="err" id="e"></p><button class="btn">Log in</button> <span class="mut">New here? <a href="#register">Register</a></span></form>`},
+async dashboard(){const a=(await api('myApplications')).apps,p=S.profile;return `<h1>Welcome, ${esc(S.user.full_name.split(' ')[0])}</h1><div class="grid"><div class="card"><h2>Applications</h2><h1>${a.length}</h1><a href="#track">View status</a></div><div class="card"><h2>Profile</h2><p class="mut">${p.headline?esc(p.headline):'Not completed yet'}</p><a href="#profile">Edit profile</a></div><div class="card"><h2>CV</h2><p class="mut">${p.cv_name?esc(p.cv_name)+' · '+kb(p.cv_size):'No CV uploaded'}</p><a href="#profile">${p.cv_name?'Replace':'Upload'} CV</a></div></div>`},
+profile(){const u=S.user,p=S.profile;return `<form class="card form" id="f"><h1>My profile</h1><label>Full name</label><input name="name" value="${esc(u.full_name)}" required><label>Email</label><input value="${esc(u.email)}" disabled><div class="row"><div><label>Phone</label><input name="phone" type="tel" value="${esc(p.phone)}"></div><div><label>Location</label><input name="loc" value="${esc(p.location)}"></div></div><label>Headline</label><input name="head" placeholder="e.g. Marketing graduate" value="${esc(p.headline)}"><label>Skills (comma separated)</label><input name="skills" value="${esc(p.skills)}"><label>About me</label><textarea name="about" rows="4">${esc(p.about)}</textarea><label>CV (PDF, DOC or DOCX, max 5 MB)</label><input type="file" name="cv" accept=".pdf,.doc,.docx"><p class="mut">${p.cv_name?'Current: '+esc(p.cv_name)+' ('+kb(p.cv_size)+')':'No CV uploaded yet.'}</p><p class="err" id="e"></p><button class="btn">Save profile</button></form>`},
+apply(){const u=S.user,p=S.profile;return `<form class="card form" id="f"><h1>Job application</h1><label>Position</label><input name="job" required value="${esc(sj())}" placeholder="Type the position you are applying for"><div class="row"><div><label>Full name</label><input name="name" value="${esc(u.full_name)}" required></div><div><label>Email</label><input name="email" type="email" value="${esc(u.email)}" required></div><div><label>Phone</label><input name="phone" type="tel" value="${esc(p.phone)}" required></div><div><label>Years of experience</label><input name="years" type="number" min="0" max="50" required></div></div><label>Address</label><input name="addr" value="${esc(p.location)}" required><div class="row"><div><label>Highest education</label><select name="edu"><option>High school</option><option>Diploma</option><option>Bachelor’s</option><option>Master’s</option><option>PhD</option></select></div><div><label>Expected salary</label><input name="sal" placeholder="Optional"></div></div><label>Cover note</label><textarea name="note" rows="4"></textarea><label>Upload CV (PDF, DOC or DOCX, max 5 MB)</label><input type="file" name="cv" accept=".pdf,.doc,.docx" ${p.cv_name?'':'required'}><p class="mut">${p.cv_name?'Leave empty to use '+esc(p.cv_name):''}</p><p class="err" id="e"></p><button class="btn">Submit application</button></form>`},
+submitted(){if(!LAST)return V.track();return `<div class="card form" style="text-align:center"><div style="font-size:3rem;color:var(--g)">✓</div><h1>Application submitted</h1><p class="mut">Thank you for applying for <b>${esc(LAST.pos)}</b>.</p><p class="mut" style="margin-bottom:4px">Your application reference</p><p style="font-size:1.8rem;font-weight:800;letter-spacing:.05em;margin:0 0 14px">${esc(LAST.ref)}</p><p class="mut">Please keep this reference number. You can follow your status at any time under My applications.</p><a class="btn" href="#track">View my applications</a></div>`},
+async track(){const a=(await api('myApplications')).apps;if(!a.length)return `<h1>My applications</h1><div class="card"><p>No applications yet.</p><a class="btn" href="#apply">Apply now</a></div>`;
+return `<h1>My applications</h1>`+a.map(x=>{const i=ALL.indexOf(x.status),rej=i===4,cur=rej?1:i;return `<div class="card"><div class="top"><div><h2 style="margin:0">${esc(x.position)}</h2><span class="mut">Ref ${esc(x.ref)} · Applied ${fdate(x.applied_at)} · CV: ${esc(x.cv_name)}</span></div><span class="tag" style="${rej?'background:#fdd;color:#c22':''}">${rej?'Not selected':esc(x.status)}</span></div><ol class="steps ${rej?'rej':''}">${STEPS.map((s,k)=>`<li class="${k<=cur?'d':''}">${s}</li>`).join('')}</ol></div>`}).join('')+`<p class="mut">Your status is updated by our hiring team.</p>`},
+async admin(){AROWS=null;
+  if(!adm())return `<form class="card form" id="f"><h1>Staff login</h1><p class="mut">Hiring team only.</p><label>Email</label><input name="email" type="email" required><label>Password</label><input name="pw" type="password" required><p class="err" id="e"></p><button class="btn">Log in</button></form>`;
+  const [jr,ar]=await Promise.all([api('jobs'),api('adminApplications')]),jobs=jr.jobs,rows=ar.apps;AROWS=rows.map(a=>({id:a.id,name:a.full_name,email:a.email,phone:a.phone,position:a.position,ref:a.ref,date:fdate(a.applied_at),edu:a.education,years:a.experience_years,addr:a.address,sal:a.expected_salary,note:a.note,cvName:a.cv_name,cv:a.cv_name?a.id:'',st:ALL.indexOf(a.status)}));AF={q:'',st:'',pos:'',page:1};
+  return `<div class="top"><h1>Hiring admin</h1></div>
+<form class="card" id="jf"><h2>Post a new job</h2><div class="row"><div><label>Job title</label><input name="title" required></div><div><label>Department</label><input name="dept" required></div><div><label>Location</label><input name="loc" required></div><div><label>Type</label><select name="type"><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Internship</option></select></div></div><label>Description</label><textarea name="desc" rows="3"></textarea><p style="margin:14px 0 0"><button class="btn">Post job</button></p></form>
+<div class="card"><h2>Posted jobs (${jobs.length})</h2>${jobs.length?jobs.map(j=>`<div class="top" style="padding:8px 0;border-bottom:1px solid var(--line)"><span><b>${esc(j.title)}</b> <span class="mut">· ${esc(j.dept)} · ${esc(j.loc)} · ${esc(j.type)}</span></span><button class="btn ghost sm" data-rm="${j.id}">Remove</button></div>`).join(''):'<p class="mut">No jobs posted yet.</p>'}</div>
+<h2 style="margin-top:26px">Applications</h2>${adminFilters()}<div id="at"></div><p><button class="btn ghost sm" id="aout">Log out</button></p>`}
+};
+
+const SL=[...STEPS,'Rejected'],PER=10;let AROWS=null,AF={q:'',st:'',pos:'',page:1};
+function adminFilters(){return `<div class="card"><div class="row"><div><label>Search</label><input id="aq" placeholder="Name, email, position or reference…"></div><div><label>Status</label><select id="as"><option value="">All statuses</option>${SL.map(s=>`<option>${s}</option>`).join('')}</select></div><div><label>Position</label><select id="ap"><option value="">All positions</option>${[...new Set(AROWS.map(x=>x.position))].sort().map(p=>`<option>${esc(p)}</option>`).join('')}</select></div></div></div>`}
+function adminInit(){['aq','as','ap'].forEach(i=>$('#'+i).oninput=()=>{AF={q:$('#aq').value,st:$('#as').value,pos:$('#ap').value,page:1};adminTable()});adminTable()}
+function adminTable(){
+  const q=AF.q.trim().toLowerCase();
+  const r=AROWS.filter(x=>(!AF.st||SL[x.st]===AF.st)&&(!AF.pos||x.position===AF.pos)&&(!q||[x.name,x.email,x.phone,x.position,x.ref].join(' ').toLowerCase().includes(q)));
+  const pages=Math.max(1,Math.ceil(r.length/PER));if(AF.page>pages)AF.page=pages;
+  const s=(AF.page-1)*PER,v=r.slice(s,s+PER);let nav='';
+  if(pages>1){const pg=(n,t,on,dis)=>`<button class="btn ${on?'':'ghost'} sm" data-pg="${n}" ${dis?'disabled':''}>${t}</button>`;
+    nav=pg(AF.page-1,'‹ Previous',0,AF.page===1);let last=0;
+    for(let i=1;i<=pages;i++){if(i===1||i===pages||Math.abs(i-AF.page)<=1){if(i-last>1)nav+='<span class="mut">…</span>';nav+=pg(i,i,i===AF.page);last=i}}
+    nav+=pg(AF.page+1,'Next ›',0,AF.page===pages)}
+  $('#at').innerHTML=`<p class="mut">${r.length?`Showing ${s+1}–${Math.min(s+PER,r.length)} of ${r.length} application${r.length===1?'':'s'}`:'No applications found'}${r.length!==AROWS.length?` (filtered from ${AROWS.length})`:''}</p>`
+  +(v.length?`<div class="card" style="overflow-x:auto"><table><tr><th>Applicant</th><th>Position</th><th>Details</th><th>CV</th><th>Status</th></tr>${v.map(x=>`<tr><td><b>${esc(x.name)}</b><br>${esc(x.email)}<br>${esc(x.phone)}</td><td>${esc(x.position)}<br><span class="mut">${esc(x.ref)} · ${esc(x.date)}</span></td><td>${esc(x.edu)} · ${esc(x.years)} yrs<br><span class="mut">${esc(x.addr)}</span><br>${esc(x.sal)}<br>${esc(x.note)}</td><td>${esc(x.cvName)}<br>${x.cv?`<button class="btn sm" data-cv="${esc(x.cv)}" data-n="${esc(x.cvName)}" style="margin-top:6px">View CV</button>`:'<span class="mut">No file stored</span>'}</td><td><select data-st="${x.id}" style="min-width:140px">${SL.map((t,i)=>`<option value="${i}" ${x.st===i?'selected':''}>${t}</option>`).join('')}</select></td></tr>`).join('')}</table></div>`:'<div class="card">No applications match your search.</div>')
+  +(pages>1?`<div class="top" style="justify-content:center;gap:6px;margin:4px 0 20px"><span class="mut" style="width:100%;text-align:center">Page ${AF.page} of ${pages}</span>${nav}</div>`:'');
+  const at=$('#at');at.querySelectorAll('[data-pg]').forEach(b=>b.onclick=()=>{AF.page=+b.dataset.pg;adminTable();at.scrollIntoView()});
+  at.querySelectorAll('[data-st]').forEach(sel=>sel.addEventListener('change',()=>{const x=AROWS.find(y=>y.id==sel.dataset.st);if(x)x.st=+sel.value}));
+  bind('admin')}
+function homeInit(){
+  const opt=(k,l)=>`<option value="">All ${l}</option>`+[...new Set(JOBS.map(j=>j[k]).filter(Boolean))].sort().map(v=>`<option>${esc(v)}</option>`).join('');
+  $('#fd').innerHTML=opt('dept','departments');$('#fl').innerHTML=opt('loc','locations');$('#ft').innerHTML=opt('type','types');
+  const show=()=>{const q=$('#q').value.toLowerCase(),d=$('#fd').value,l=$('#fl').value,t=$('#ft').value;
+    const r=JOBS.filter(j=>(!d||j.dept===d)&&(!l||j.loc===l)&&(!t||j.type===t)&&(!q||[j.title,j.dept,j.loc,j.desc].join(' ').toLowerCase().includes(q)));
+    $('#jl').innerHTML=r.length?r.map(j=>`<div class="card"><span class="tag">${esc(j.type)}</span><h2 style="margin-top:8px">${esc(j.title)}</h2><p class="mut">${esc(j.dept)} · ${esc(j.loc)}</p><p>${esc(j.desc)}</p>${APPLIED.has(nk(j.title))?'<span class="tag">Applied ✓</span>':`<a class="btn sm" href="#apply" data-job="${esc(j.title)}">Apply</a>`}</div>`).join(''):`<p class="mut">${JOBS.length?'No jobs match your search.':'No open positions right now. Please check back soon.'}</p>`};
+  ['q','fd','fl','ft'].forEach(i=>$('#'+i).oninput=show);
+  $('#jl').onclick=e=>{const a=e.target.closest('[data-job]');if(a)try{sessionStorage.setItem('job',a.dataset.job)}catch(x){}};show()}
+
+function viewCv(id,n){
+  const pdf=/\.pdf$/i.test(n),u='api.php?action=cv&id='+id,m=document.createElement('div');m.className='modal';
+  m.innerHTML=`<div class="box"><div class="hd"><b>${esc(n)}</b><span><a class="btn sm" href="${u}" target="_blank" rel="noopener">Open in new tab</a> <a class="btn sm ghost" href="${u}&dl=1">Download</a> <button class="btn ghost sm" id="mx">Close</button></span></div>${pdf?`<iframe src="${u}" title="CV"></iframe>`:'<p style="padding:20px">Word files can’t be previewed here. Use Download.</p>'}</div>`;
+  document.body.appendChild(m);m.querySelector('#mx').onclick=()=>m.remove()}
+
+function bind(p){
+  const f=$('#f'),err=m=>{const e=$('#e');if(e)e.textContent=m};
+  if(p==='home')homeInit();
+  document.querySelectorAll('[data-st]').forEach(s=>s.onchange=async()=>{try{await api('setStatus',{id:s.dataset.st,status:ALL[+s.value]})}catch(e){alert(e.message)}});
+  document.querySelectorAll('[data-rm]').forEach(b=>b.onclick=async()=>{if(!confirm('Remove this job from the website?'))return;try{await api('removeJob',{id:b.dataset.rm});route()}catch(e){alert(e.message)}});
+  document.querySelectorAll('[data-cv]').forEach(b=>b.onclick=()=>viewCv(b.dataset.cv,b.dataset.n));
+  const jf=$('#jf');if(jf)jf.onsubmit=async e=>{e.preventDefault();try{await api('addJob',Object.fromEntries(new FormData(jf)));route()}catch(x){alert(x.message)}};
+  const ao=$('#aout');if(ao)ao.onclick=async()=>{try{await api('logout',{})}catch(e){}S.user=null;route()};
+  if(!f)return;
+  f.onsubmit=async e=>{e.preventDefault();err('');const d=Object.fromEntries(new FormData(f)),fl=f.cv&&f.cv.files[0],btn=f.querySelector('button');
+    if(fl&&fl.size>5242880)return err('CV must be 5 MB or smaller.');
+    btn.disabled=true;
+    try{
+      if(p==='register'){if(d.pw!==d.pw2)throw new Error('Passwords do not match.');await api('register',{name:d.name,email:d.email,password:d.pw});await load();location.hash='dashboard'}
+      else if(p==='login'){await api('login',{email:d.email,password:d.pw});await load();location.hash=adm()?'admin':'dashboard'}
+      else if(p==='admin'){await api('login',{email:d.email,password:d.pw});await load();if(!adm()){await api('logout',{});S.user=null;throw new Error('This account is not a staff account.')}route()}
+      else if(p==='profile'){await api('saveProfile',new FormData(f),true);await load();menu();route()}
+      else if(p==='apply'){const r=await api('apply',new FormData(f),true);try{sessionStorage.removeItem('job')}catch(x){}LAST={ref:r.ref,pos:r.position};await load();location.hash='submitted'}
+    }catch(x){err(x.message)}
+    btn.disabled=false};
+}
+
+async function route(){
+  let p=(location.hash||'#home').slice(1);if(!V[p])p='home';
+  if(['dashboard','profile','apply','track','submitted'].includes(p)){if(!S.user){location.hash='login';return}if(adm()){location.hash='admin';return}}
+  if(['login','register'].includes(p)&&S.user){location.hash=adm()?'admin':'dashboard';return}
+  $('#app').innerHTML='<p class="mut">Loading…</p>';
+  try{$('#app').innerHTML=await V[p]()}catch(e){$('#app').innerHTML=`<div class="card"><h2>Something went wrong</h2><p class="mut">${esc(e.message)}</p></div>`;menu();return}
+  menu();bind(p);if(p==='admin'&&AROWS)adminInit();$('#nav').classList.remove('open');scrollTo(0,0)}
+$('#burger').onclick=()=>$('#nav').classList.toggle('open');
+addEventListener('hashchange',route);
+load().then(route);
+</script>
+</body>
+</html>
